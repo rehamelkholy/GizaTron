@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/eight_dp"
+    android:layout_marginLeft="@dimen/eight_dp"
+    android:layout_marginTop="@dimen/eight_dp"
+    android:layout_marginEnd="@dimen/eight_dp"
+    android:layout_marginRight="@dimen/eight_dp"
+    android:layout_marginBottom="@dimen/eight_dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/images_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_hundred_sixty_dp"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_of_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:layout_marginRight="@dimen/eight_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/twenty_two_sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:fontFamily="sans-serif-smallcaps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/images_recycler"
+            tools:text="Name of the Place" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/twenty_sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_of_place"
+            tools:text="Address" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:layout_marginRight="@dimen/eight_dp"
+            android:layout_marginBottom="@dimen/eight_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/eighteen_sp"
+            app:fontFamily="casual"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            tools:text="Status" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

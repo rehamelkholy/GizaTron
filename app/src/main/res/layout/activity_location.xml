@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LocationActivity">
+
+    <FrameLayout
+        android:id="@+id/toolbar_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/location_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/images_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two_hundred_forty_dp"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/name_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/twenty_two_sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:fontFamily="sans-serif-smallcaps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/images_container"
+                tools:text="Location Name" />
+
+            <TextView
+                android:id="@+id/short_description_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/eighteen_sp"
+                android:typeface="sans"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_view"
+                tools:text="Short Description" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/short_description_view">
+
+                <LinearLayout
+                    android:id="@+id/get_directions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/thirty_six_dp"
+                        android:layout_height="@dimen/thirty_six_dp"
+                        android:contentDescription="@string/get_directions"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_directions_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/directions"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fourteen_sp"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/call_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/thirty_six_dp"
+                        android:layout_height="@dimen/thirty_six_dp"
+                        android:contentDescription="@string/call"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_call_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/call"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fourteen_sp"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:layout_marginBottom="@dimen/eight_dp"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/eight_dp"
+                android:textSize="@dimen/sixteen_sp"
+                app:fontFamily="sans-serif"
+                app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:text="Location Dscription" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description">
+
+                <ImageView
+                    android:layout_width="@dimen/twenty_four_dp"
+                    android:layout_height="@dimen/twenty_four_dp"
+                    android:contentDescription="@string/address"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_place_black_24dp" />
+
+                <TextView
+                    android:id="@+id/address_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/eight_dp"
+                    android:layout_marginRight="@dimen/eight_dp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:includeFontPadding="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sixteen_sp"
+                    android:typeface="sans"
+                    app:fontFamily="sans-serif"
+                    tools:text="Location Address" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:layout_width="@dimen/twenty_four_dp"
+                    android:layout_height="@dimen/twenty_four_dp"
+                    android:contentDescription="@string/hours"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_access_time_black_24dp" />
+
+                <TextView
+                    android:id="@+id/hours_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/eight_dp"
+                    android:layout_marginRight="@dimen/eight_dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sixteen_sp"
+                    android:typeface="sans"
+                    app:fontFamily="sans-serif"
+                    tools:text="Location Hours" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginLeft="@dimen/eight_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:layout_marginBottom="@dimen/eight_dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <ImageView
+                    android:layout_width="@dimen/twenty_four_dp"
+                    android:layout_height="@dimen/twenty_four_dp"
+                    android:layout_marginBottom="@dimen/eight_dp"
+                    android:contentDescription="@string/phone_number"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_call_black_24dp" />
+
+                <TextView
+                    android:id="@+id/phone_number_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/eight_dp"
+                    android:layout_marginRight="@dimen/eight_dp"
+                    android:layout_marginBottom="@dimen/eight_dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sixteen_sp"
+                    android:typeface="sans"
+                    app:fontFamily="sans-serif"
+                    tools:text="Location Phone Number" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

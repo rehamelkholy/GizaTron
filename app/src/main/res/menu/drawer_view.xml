@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/food_and_drink"
+            android:title="@string/first_category">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/restaurants"
+                        android:icon="@drawable/ic_restaurant_black_24dp"
+                        android:title="@string/submenu1_item1" />
+                    <item
+                        android:id="@+id/bars"
+                        android:icon="@drawable/ic_local_bar_black_24dp"
+                        android:title="@string/submenu1_item2" />
+                    <item
+                        android:id="@+id/coffee"
+                        android:icon="@drawable/ic_local_cafe_black_24dp"
+                        android:title="@string/submenu1_item3" />
+                    <item
+                        android:id="@+id/delivery"
+                        android:icon="@drawable/ic_motorcycle_black_24dp"
+                        android:title="@string/submenu1_item4" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/things_to_do"
+            android:title="@string/second_category">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/parks"
+                        android:icon="@drawable/ic_nature_people_black_24dp"
+                        android:title="@string/submenu2_item1" />
+                    <item
+                        android:id="@+id/gyms"
+                        android:icon="@drawable/ic_fitness_center_black_24dp"
+                        android:title="@string/submenu2_item2" />
+                    <item
+                        android:id="@+id/art"
+                        android:icon="@drawable/ic_image_black_24dp"
+                        android:title="@string/submenu2_item3" />
+                    <item
+                        android:id="@+id/attractions"
+                        android:icon="@drawable/ic_local_activity_black_24dp"
+                        android:title="@string/submenu2_item4" />
+                    <item
+                        android:id="@+id/nightlife"
+                        android:icon="@drawable/ic_casino_black_24dp"
+                        android:title="@string/submenu2_item5" />
+                    <item
+                        android:id="@+id/live_music"
+                        android:icon="@drawable/ic_music_note_black_24dp"
+                        android:title="@string/submenu2_item6" />
+                    <item
+                        android:id="@+id/movies"
+                        android:icon="@drawable/ic_local_movies_black_24dp"
+                        android:title="@string/submenu2_item7" />
+                    <item
+                        android:id="@+id/museums"
+                        android:icon="@drawable/ic_map_black_24dp"
+                        android:title="@string/submenu2_item8" />
+                    <item
+                        android:id="@+id/libraries"
+                        android:icon="@drawable/ic_local_library_black_24dp"
+                        android:title="@string/submenu2_item9" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/shopping"
+            android:title="@string/third_category">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/groceries"
+                        android:icon="@drawable/ic_local_grocery_store_black_24dp"
+                        android:title="@string/submenu3_item1" />
+                    <item
+                        android:id="@+id/beauty_supplies"
+                        android:icon="@drawable/ic_spa_black_24dp"
+                        android:title="@string/submenu3_item2" />
+                    <item
+                        android:id="@+id/car_dealers"
+                        android:icon="@drawable/ic_directions_car_black_24dp"
+                        android:title="@string/submenu3_item3" />
+                    <item
+                        android:id="@+id/home_and_garden"
+                        android:icon="@drawable/ic_home_black_24dp"
+                        android:title="@string/submenu3_item4" />
+                    <item
+                        android:id="@+id/apparel"
+                        android:icon="@drawable/ic_local_mall_black_24dp"
+                        android:title="@string/submenu3_item5" />
+                    <item
+                        android:id="@+id/shopping_centers"
+                        android:icon="@drawable/ic_store_mall_directory_black_24dp"
+                        android:title="@string/submenu3_item6" />
+                    <item
+                        android:id="@+id/electronics"
+                        android:icon="@drawable/ic_important_devices_black_24dp"
+                        android:title="@string/submenu3_item7" />
+                    <item
+                        android:id="@+id/sporting_goods"
+                        android:icon="@drawable/ic_directions_bike_black_24dp"
+                        android:title="@string/submenu3_item8" />
+                    <item
+                        android:id="@+id/convenience_stores"
+                        android:icon="@drawable/ic_local_convenience_store_black_24dp"
+                        android:title="@string/submenu3_item9" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/services"
+            android:title="@string/fourth_category">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/hotels"
+                        android:icon="@drawable/ic_local_hotel_black_24dp"
+                        android:title="@string/submenu4_item1" />
+                    <item
+                        android:id="@+id/atm"
+                        android:icon="@drawable/ic_local_atm_black_24dp"
+                        android:title="@string/submenu4_item2" />
+                    <item
+                        android:id="@+id/beauty_salons"
+                        android:icon="@drawable/ic_spa_black_24dp"
+                        android:title="@string/submenu4_item3" />
+                    <item
+                        android:id="@+id/car_rental"
+                        android:icon="@drawable/ic_directions_car_black_24dp"
+                        android:title="@string/submenu4_item4" />
+                    <item
+                        android:id="@+id/car_wash"
+                        android:icon="@drawable/ic_local_car_wash_black_24dp"
+                        android:title="@string/submenu4_item5" />
+                    <item
+                        android:id="@+id/dry_cleaning"
+                        android:icon="@drawable/ic_local_laundry_service_black_24dp"
+                        android:title="@string/submenu4_item6" />
+                    <item
+                        android:id="@+id/gas"
+                        android:icon="@drawable/ic_local_gas_station_black_24dp"
+                        android:title="@string/submenu4_item7" />
+                    <item
+                        android:id="@+id/hospitals_and_clinics"
+                        android:icon="@drawable/ic_local_hospital_black_24dp"
+                        android:title="@string/submenu4_item8" />
+                    <item
+                        android:id="@+id/mail_and_shipping"
+                        android:icon="@drawable/ic_local_shipping_black_24dp"
+                        android:title="@string/submenu4_item9" />
+                    <item
+                        android:id="@+id/parking"
+                        android:icon="@drawable/ic_local_parking_black_24dp"
+                        android:title="@string/submenu4_item10" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>
